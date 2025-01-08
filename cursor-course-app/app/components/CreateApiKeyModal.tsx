@@ -61,7 +61,7 @@ export function CreateApiKeyModal({ isOpen, onClose, onSubmit }: CreateApiKeyMod
           />
 
           <p className="text-xs text-gray-500">
-            *If the combined usage of all your keys exceeds your plan's limit, all requests will be rejected.
+            *If the combined usage of all your keys exceeds your plan&aposs limit, all requests will be rejected.
           </p>
         </div>
 
