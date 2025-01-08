@@ -44,7 +44,7 @@ export default function PlaygroundPage() {
         // Clear the input if it's an invalid key
         setApiKey('')
       }
-    } catch (error) {
+    } catch (_) {
       showNotification('Error connecting to server', 'error')
     } finally {
       setIsLoading(false)

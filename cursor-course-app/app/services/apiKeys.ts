@@ -1,5 +1,4 @@
 import { supabase } from '@/app/lib/supabase'
-import { ApiKey } from '@/app/types/api'
 
 export const apiKeyService = {
   async fetchApiKeys() {
