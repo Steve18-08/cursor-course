@@ -11,7 +11,7 @@ export async function POST(request: Request) {
           success: false,
           error: 'API key is required' 
         },
-        { status: 200 }
+        { status: 400 }
       )
     }
 
@@ -22,13 +22,13 @@ export async function POST(request: Request) {
       .eq('key', apiKey)
       .single()
 
-    if (error?.code === 'PGRST116') { // no rows returned
+    if (error?.code === 'PGRST116' || !data) {
       return NextResponse.json(
         { 
           success: false,
           error: 'Invalid API key' 
         },
-        { status: 200 }
+        { status: 401 }
       )
     }
 
@@ -39,7 +39,7 @@ export async function POST(request: Request) {
           success: false,
           error: 'Error validating API key' 
         },
-        { status: 200 }
+        { status: 500 }
       )
     }
 
@@ -68,7 +68,7 @@ export async function POST(request: Request) {
         success: false,
         error: 'Server error' 
       },
-      { status: 200 }
+      { status: 500 }
     )
   }
 } 

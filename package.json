@@ -1,6 +1,11 @@
 {
   "dependencies": {
+    "@langchain/community": "^0.3.23",
+    "@langchain/core": "^0.3.27",
+    "@langchain/openai": "^0.3.16",
     "@supabase/supabase-js": "^2.47.12",
-    "lucide-react": "^0.469.0"
+    "langchain": "^0.3.10",
+    "lucide-react": "^0.469.0",
+    "typescript": "^5.7.3"
   }
 }
